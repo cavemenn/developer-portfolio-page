@@ -1,5 +1,5 @@
-const name = "Jeremy";
-const greetings = `Welcome to ${name}'s portfolio website`;
+const name = prompt("Please enter your name: ");
+const greetings = `Welcome ${name} to Jeremy's portfolio website`;
 
 alert(greetings)
 
@@ -61,6 +61,19 @@ themeBtn.addEventListener("click", () => {
   localStorage.setItem("theme", next);
   updateIcon();
 });
+
+//previous code 
+/* function updateIcon() {
+     themeBtn.textContent =
+      document.documentElement.dataset.theme === "dark" ? "☀️ Flashbang?" : "🌙 Dark mode";
+} 
+    
+    themeBtn.addEventListener("click", () => {
+      const next = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+      document.documentElement.dataset.theme = next;
+      localStorage.setItem("theme", next);
+      updateIcon();
+});*/
 
 updateIcon();
 

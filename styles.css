@@ -23,7 +23,7 @@
 /* to make the scroll smooth */
 html {     
     scroll-behavior: smooth;
-}
+} 
 
 /* transition background & color is so that it takes 0.3s to change from 1 theme to another */
 body {
