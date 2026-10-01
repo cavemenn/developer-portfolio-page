@@ -1,1 +1,3 @@
-# developer-portfolio-page
+The brief
+
+Every developer needs a portfolio to showcase their skills and projects. In this project you'll build a personal portfolio page using HTML and CSS, with key sections like your background, skills, experience, and a profile picture. You'll organise the content into clear sections and apply CSS for a clean, professional design. This project focuses on structuring pages with HTML and styling them with CSS to create an attractive personal portfolio.# developer-portfolio-page

@@ -3,47 +3,202 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Page</title>
+    <title>Jeremy's Page</title>
+    <link rel="icon" href="./images/favicon-cat.png" type="image/png">
+    <script>document.documentElement.dataset.theme = localStorage.getItem("theme") || "dark";</script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="left">
-        <div>
-            <h1>Jeremy Peter James</h1>
-            <h2>Student of Sigmaschool</h2>
-            <nav>
-                <ul>
-                    <li><a>About</a></li>
-                    <li><a>Experience</a></li>
-                    <li><a>Technical Skills</a></li>
-                    <li><a>Projects</a></li>
-                </ul>
-            </nav>
-        </div>
+    <div class="page-layout">
+        <header class="left">
+            <div>
+                <h1>Jeremy Peter <span class="highlight">James</span></h1>
+                <h2>Sigmaschool Student</h2>
+                <div class="photoContainer">
+                    <img src="./images/profile-photo.jpeg" alt="profile photo" class="profile-photo">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#experience">Work Experience</a></li>
+                        <li><a href="#skills">Technical Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                    </ul>
+                </nav>
+            </div>
+    
+            <ul class="socials">
+                <li><a href="https://github.com/cavemenn" target="_blank">Github</a></li>
+                <li><a href="https://www.linkedin.com/" target="_blank">LinkedIn</a></li>
+                <li><a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
+            </ul>
+        </header>
+        <main class="right">
+            <section id="about">
+                <p>Engineering professional transitioning into full-stack development, currently building skills in Java, JavaScript, and web development. Seeking an opportunity to start a career in software development, and grow into a well-rounded full-stack developer.</p>
+            </section>
 
-        <ul>
-            <li>Github</li>
-            <li>LinkedIn</li>
-            <li>Instagram</li>
-        </ul>
-    </header>
-    <main class="right">
-        <section id="about">
-            <p>This is the about section</p>
-        </section>
-        <section id="experience">
-            <h3>Experience</h3>
-            <p>This is where experience is</p>
-        </section>
-        <section id="skills">
-            <h3>Technical Skills</h3>
-            <p>This section is for technical skills</p>
-        </section>
-        <section id="projects">
-            <h3>Projects</h3>
-            <p>This section is for projects</p>
-        </section>
-    </main>
+            <div class="theme-toggle">
+                <button id="theme-btn" class="theme-btn" aria-label="Toggle dark and light mode"></button>
+            </div>
+
+            <section id="cat">
+                <pre id="ascii-output" class="ascii-output"></pre>
+                <button id="ascii-btn" class="ascii-btn">Generate cat</button>
+            </section>
+
+            <section id="experience">
+                <h3>Work Experience</h3>
+
+                <div class="work-experience">
+                    <div class="work-experience-left">
+                        <p>May 2026 - Present</p>
+                    </div>
+                    <div class="work-experience-right">
+                        <div class="work-title-location">
+                            <h4>Self Employed</h4>
+                            <p>Rivu Coffee Roasters</p>
+                        </div>
+                        <ol>
+                            <li>Roasted, tested and packaged coffee beans for customers.</li>
+                            <li>Managed the daily operations of the coffee roasting business</li>
+                            <li>Sourced coffee beans and developed different coffee products</li>
+                            <li>Managed Shopee listings, orders, pricing and customer service</li>
+                            <li>Managed wholesale orders and relationships with cafes</li>
+                            <li>Grew the business and continously improved products and operations</li>
+                        </ol>
+                    </div>
+                </div>                
+
+                <div class="work-experience">
+                    <div class="work-experience-left">
+                        <p>April  2025 - April 2026</p>
+                    </div>
+                    <div class="work-experience-right">
+                        <div class="work-title-location">
+                            <h4>Project - Construction (Executive)</h4>
+                            <p>PETRONAS Project Delivery & Technology</p>
+                        </div>
+                        <ol>
+                            <li>Developed and coordinated construction plans, work sequences, schedules, priorities and work-front requirements to support project execution and pionerring Advanced Work Packaging (AWP) in selected project.</li>
+                            <li>Coordingated with EPCC contractor and subcontractors, monitored performance and followed up on construction issues, deliverables, and outstanding works.</li>
+                            <li>Monitored and supervised site construction activities to ensure work was carried out according to approved drawings, specifications, procedures and project requirements.</li>
+                            <li>Ensured construction activities complied with project and PETRONAS HSSE requirements, including site safety practices, permits and inspections.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="work-experience">
+                    <div class="work-experience-left">
+                        <p>March 2023 - April 2025</p>
+                    </div>
+                    <div class="work-experience-right">
+                        <div class="work-title-location">
+                            <h4>Project - Construction (Executive)</h4>
+                            <p>ASEAN Bintulu Fertiliser Sdn Bhd</p>
+                        </div>
+                        <ol>
+                            <li>Attached at ASEAN Bintulu Fertiliser Sdn Bhd (ABFSB) until April 2025 as a Project Engineer as part of PETRONAS PD&T Recruit-To-Train programme.</li>
+                            <li>Heavily involved in the planning and execution for projects occurring during ABF upcoming Pitstop and the upcoming 16th Turnaround, aimed at significantly enhancing operational efficiency and safety standards.</li>
+                            <li>Contributed heavily to the planning and successful execution of ABF Plant Change (PC) projects, demonstrating a keen ability to manage complex project requirements within tight deadlines.</li>
+                            <li>Proficient in Project Management essentials, including the development of Work Breakdown Structures (WBS), fostering effective communication channels with contractors, and ensuring rigorous contract management.</li>
+                            <li>Skilled in Project Scheduling, applying meticulous attention to detail to maintain project timelines and uphold the highest standards of project quality and control.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="work-experience">
+                    <div class="work-experience-left">
+                        <p>January 2021 - August 2021</p>
+                    </div>
+                    <div class="work-experience-right">
+                        <div class="work-title-location">
+                            <h4>Engineering Intern</h4>
+                            <p>Malaysia LNG Sdn Bhd</p>
+                        </div>
+                        <ol>
+                            <li>Diligently monitored the parameters of the Industrial Effluent Treatment System (IETS) and Fresh Cooling Water (FCW) units, ensuring operational efficiency and environmental compliance. Authored comprehensive weekly reports that analysed performance data and identified trends.</li>
+                            <li>Acquired proficiency in Power BI and successfully developed a Power BI reporting dashboard. This tool enhanced the utility reporting process, enabling more informed decision-making through interactive data visualization.</li>
+                            <li>Conducted an in-depth study and implemented pH control compliance within IETS operations. Collaborated with the Operations/Production team and Technical Authorities during review sessions to ensure adherence to best practices.</li>
+                            <li>Reviewed and provided recommendations on the control range for Mixed Liquor Suspended Solids (MLSS) and Mixed Liquor Volatile Suspended Solids (MLVSS) values, contributing to the maintenance of high-quality standards in MLNG’s processes.</li>
+                        </ol>
+                    </div>
+                </div>
+
+            </section>
+            <section id="skills">
+                <h3>Technical Skills</h3>
+                <ul class="skills-list">
+                    <li>HTML</li>
+                    <li>Node.js</li>
+                    <li>CSS</li>
+                    <li>Javascript</li>
+                    <li>Power BI</li>
+                    <li>DaVinci Resolve</li>
+                    <li>Affinity</li>
+                    <li>FreeCAD</li>
+                    <li>AutoCAD</li>
+                    <li>Blender</li>
+                    <li>Microsoft Office</li>
+                    <li>Matlab</li>
+                    <li>Python</li>
+                </ul>
+            </section>
+            <section id="projects">
+                <h3>Projects</h3>
+                <div class="projects-list">
+                    <h4>ABF Unit 97 Recirculation Pump Project</h4>
+                    <p>ASEAN Bintulu Fertiliser Sdn Bhd</p>
+                    <p>2024</p>
+                    <ol>
+                        <li>Involved in the installation, removal, and modification of recirculation pump system components, including piping, electrical, instrument, and structural elements, to enhance safety and operational efficiency.</li>
+                        <li>Successfully managed the procurement, construction, and commissioning (PCC) phases, ensuring compliance with DOE regulations and improving the aeration recirculation pump system within the Wastewater Treatment Facility (WWTF) Unit 97.</li>
+                        <li>Attended regular project meetings to discuss updates, challenges, and execution plans, facilitating effective communication and collaboration among team members.</li>
+                        <li>Addressed and resolved project challenges, including the endorsement of pipe sleeve design and system integration, to maintain project timelines and ensure successful completion.</li>
+                        <li>Implemented safety measures and quality audits, ensuring adherence to industry standards and enhancing workplace safety.</li>
+                    </ol>
+                </div>
+
+                <div class="projects-list">
+                    <h4>ABF Bundwall Project</h4>
+                    <p>ASEAN Bintulu Fertiliser Sdn Bhd</p>
+                    <p>2023</p>
+                    <ol>
+                        <li>Monitored the engineering, procurement, construction, and commissioning (EPCC) phases of the ABF Bundwall Project, aimed at enhancing safety and operational efficiency.</li>
+                        <li>Successfully managed project milestones, including mechanical completion and final documentation, achieving 100% completion of the Approved for Construction (AFC) documents.</li>
+                        <li>Conducted quality audits and implemented safety measures, ensuring compliance with industry standards and enhancing workplace safety.</li>
+                        <li>Addressed and resolved project challenges, including manpower shortages and punch list closures, to maintain project timelines.</li>
+                        <li>Facilitated regular progress meetings to discuss daily activities, site issues, and execution progress, ensuring effective communication and collaboration among team members.</li>
+                    </ol>
+                </div>
+
+                <div class="projects-list">
+                    <h4>FYP: Development and Deployment of Gas Turbine Model Interface Using Raspberry Pi</h4>
+                    <p>Universiti Teknologi PETRONAS</p>
+                    <p>2022</p>
+                    <ol>
+                        <li>Engineered a gas turbine model interface, successfully transitioning from concept to deployment.</li>
+                        <li>Utilized MATLAB/Simulink for initial model creation, followed by conversion to Scilab/Xcos to embrace open-source accessibility.</li>
+                        <li>Extracted comprehensive data from the Scilab/Xcos model, including graphical visualizations and mean values of all parameters within the gas turbine model.</li>
+                        <li>Developed a user-friendly web interface, employing HTML for frontend design and Python for backend functionality, integrating modules like PyTesseract and PyAutoGUI for enhanced capabilities.</li>
+                        <li>Deployed the interface on a Raspberry Pi, leveraging Flask to establish a micro web framework, facilitating seamless remote access to the gas turbine model via devices connected to the same network.</li>
+                    </ol>
+                </div>
+
+                <div class="projects-list">
+                    <h4>Plant Design Project: Manufacturing of Acrylic Acid Using Bio-Based Feedstocks</h4>
+                    <p>Universiti Teknologi PETRONAS</p>
+                    <p>2022</p>
+                    <ol>
+                        <li>Collaboratively designed a chemical production plant with a team of 5, aiming to produce over 50,000 tonnes/year of acrylic acid, with a product split of 70% technical grade and 30% glacial grade.</li>
+                        <li>Applied comprehensive chemical engineering principles including process simulation, wastewater treatment, separation techniques, and reaction processes to optimize plant efficiency and sustainability.</li>
+                        <li>Conducted detailed design and analysis of critical plant equipment, specifically a distillation column and a heat exchanger, encompassing process flow, mechanical integrity, stress analysis, and efficiency optimization.</li>
+                    </ol>
+                </div>
+
+            </section>
+        </main>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

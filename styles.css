@@ -1,0 +1,345 @@
+:root {
+    --bg: #003957;
+    --text: #e2e8f0;
+    --grey: #94a3b8;
+    --accent: #5eead4;
+    --pill: #5EEAD41A;
+    --pill-hover: #5eead440;
+}
+
+:root[data-theme="light"] {
+    --bg: #f8fafc;
+    --text: #0f172a;
+    --grey: #475569;
+    --accent: #0f766e;
+    --pill: #0F766E1A;
+    --pill-hover: #0f766e33;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    transition: background 0.3s, color 0.3s;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;  /* added padding and margin to remove gap */
+}
+
+a {
+    color: inherit; 
+    /* added color to remove the ugly purple default color  */
+    text-decoration: none; 
+    /* added to remove the underline on the html */
+}
+
+.page-layout {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 64px;
+    /* border: 2px solid red; */
+}
+
+.left {
+    position: sticky;
+    top: 0;
+    height: 100vh; /* vh is viewport heigh, so 100vh is the full height of the viewport/screen*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;  /* intro at top, social links at bottom */
+    padding: 80px 0;
+    /* border: 2px solid red; */
+}
+
+.left h1 {
+    margin: 0;
+    font-size: 2.4rem;
+    line-height: 1.1;
+}
+
+.highlight {
+    color: var(--accent);
+}
+
+.left h2 {
+    margin: 8px 0 12px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--accent);
+}
+
+.photoContainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.profile-photo {
+    width: 300px;
+    max-width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20%;
+}
+
+nav {
+    margin-top: 40px;
+}
+ 
+nav a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 0;
+    color: var(--grey);
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+nav a::before {
+    content: "";
+    width: 32px;
+    height: 1px;
+    background: var(--grey);
+    transition: width 0.2s, background 0.2s;
+}
+
+nav a:hover, nav a.active {
+    color: var(--text);
+}
+
+nav a:hover::before, nav a.active::before {
+    width: 64px;
+    background: var(--text);
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color:var(--grey);
+}
+
+.socials a:hover {
+    color: var(--accent);
+}
+
+.right {
+    /* border: 2px solid red; */
+    padding: 80px 0;     /* extra bottom space so the last section can reach the middle */
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+#about {
+    text-align: justify;
+}
+
+section h3 {
+    margin-top: 0;
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+}
+
+.theme-toggle {
+    margin-bottom: 40px;
+}
+
+.theme-btn {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 100px;
+    background: var(--pill);
+    color: var(--text);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.theme-btn:hover {
+    background: var(--pill-hover);
+}
+
+.ascii-output {
+    font-family: 'Courier New', monospace;   /* must be monospace or the art misaligns */
+    font-size: 1rem;
+    line-height: 1.2;
+    color: var(--accent);
+    background: var(--pill);
+    padding: 16px 20px;
+    border-radius: 12px;
+    margin: 0 0 16px;
+    min-height: 120px;      /* stops the page jumping when the art changes size */
+    overflow-x: auto;       /* wide art scrolls instead of breaking the layout on mobile */
+}
+
+.ascii-btn {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 100px;
+    background: var(--pill);
+    color: var(--accent);
+    font-family: inherit;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.ascii-btn:hover {
+    background: var(--pill-hover);
+}
+
+#experience {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.work-experience {
+    display: flex;
+    gap: 3rem;
+    /* border: 2px solid red; */
+}
+
+.work-experience-left {
+    flex: 0 0 200px;   /* don't grow, don't shrink, stay 200px */
+}
+
+.work-experience-right {
+    flex: 1;
+    min-width: 0;      /* lets long text wrap instead of forcing the box wider */
+}
+
+.work-experience ol {
+    list-style: disc;
+}
+
+.work-experience li{
+    text-align: justify;
+    margin-bottom: 5px;
+    color: var(--grey);
+    line-height: 1.3;
+}
+
+.work-experience p {
+    margin-top: 0;
+}
+
+.work-title-location p {
+    margin: 0;
+    color: var(--accent);
+}
+
+.work-title-location h4 {
+    margin: 0 0 4px;   /* no top margin, small gap below */
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skills-list li {
+    padding: 8px 20px;
+    border-radius: 100px;                     /* huge radius = fully rounded ends */
+    background: var(--pill);      /* your --accent color, very transparent */
+    color: var(--accent);
+    font-size: 0.9rem;
+}
+
+.projects-list {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.projects-list p{
+    margin: 0;
+    color: var(--accent);
+}
+
+.projects-list h4{
+    margin: 0 0 4px;
+}
+
+.projects-list li {
+    text-align: justify;
+    color: var(--grey);
+    list-style-type: disc;
+    line-height: 1.3;
+}
+
+
+@media (max-width: 800px) {
+    .page-layout {
+        grid-template-columns: minmax(0,1fr);   /* one column */
+        gap: 0;
+        }
+    
+    .left {
+        position: static;             /* no more sticky */
+        height: auto;
+        padding: 48px 0 0;
+        }
+
+    .left h1, .left h2 {
+        text-align: center; /* text align for plain block elements not within display flex */
+    }
+
+    .photoContainer {
+        justify-content: center; /* justify content because have display flex*/
+    }
+
+    .socials {
+        justify-content: center;
+        margin-top: 24px;
+    }
+
+    .right {
+        padding-top: 10px;
+    }
+    
+    nav {
+        display: none;                /* hide nav on small screens (simple option) */
+        }
+
+    .ascii-btn {
+        display: block;
+        margin: 0 auto; /* to center the button to the mobile page */
+    }
+
+    .work-experience {
+        flex-direction: column; /* to make it column instead of row */
+        gap: 0.5rem; /* fix issue in screenshot *//* fix issue in screenshot */
+        }
+
+    .work-experience-left {
+        flex:none; /* fix issue in screenshot caused by 0 0 200px */
+        }
+
+    .theme-toggle {
+        text-align: center;
+        }
+    }
