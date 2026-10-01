@@ -1,4 +1,4 @@
-:root {
+:root {         /* set up so that can declare colour once as var() */
     --bg: #003957;
     --text: #e2e8f0;
     --grey: #94a3b8;
@@ -7,7 +7,7 @@
     --pill-hover: #5eead440;
 }
 
-:root[data-theme="light"] {
+:root[data-theme="light"] {    /* light mode colours */
     --bg: #f8fafc;
     --text: #0f172a;
     --grey: #475569;
@@ -20,10 +20,12 @@
     box-sizing: border-box;
 }
 
-html {
+/* to make the scroll smooth */
+html {     
     scroll-behavior: smooth;
 }
 
+/* transition background & color is so that it takes 0.3s to change from 1 theme to another */
 body {
     margin: 0;
     background: var(--bg);
@@ -51,7 +53,7 @@ a {
     margin: 0 auto;
     padding: 0 24px;
     display: grid;
-    grid-template-columns: 1fr 1.4fr;
+    grid-template-columns: 1fr 1.4fr;   /* so that .left is 1fr and .right is 1.4 times bigger than .left */
     gap: 64px;
     /* border: 2px solid red; */
 }
@@ -69,7 +71,7 @@ a {
 
 .left h1 {
     margin: 0;
-    font-size: 2.4rem;
+    font-size: 2.4rem; /* 1 rem = 16px, used rem so that when visitor change browser default fotn size, it scales proportionally */
     line-height: 1.1;
 }
 
@@ -94,7 +96,7 @@ a {
     width: 300px;
     max-width: 100%;
     height: 300px;
-    object-fit: cover;
+    object-fit: cover;  /* cover because, it keep the image original proportion, scales it until fill the box, crops whatever was sticking out */
     border-radius: 20%;
 }
 
@@ -110,17 +112,19 @@ nav a {
     color: var(--grey);
     font-size: 0.8rem;
     letter-spacing: 0.12em;
-    text-transform: uppercase;
+    text-transform: uppercase;    /* made the text be uppercase */
 }
 
+/* dafault state before hover or active*/
 nav a::before {
-    content: "";
+    content: ""; /* required, otherwise the pseudo-element isn't created */
     width: 32px;
     height: 1px;
     background: var(--grey);
     transition: width 0.2s, background 0.2s;
 }
 
+/* .active was a class made in the javascript */
 nav a:hover, nav a.active {
     color: var(--text);
 }
